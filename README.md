@@ -1,4 +1,4 @@
-Here's a step-by-step guide for deploying an OpenVPN server on Linode, based on your instructions:
+Here's the updated guide with your requested changes for Step 8 and Step 9:
 
 ---
 
@@ -50,16 +50,15 @@ Download the OpenVPN install script provided by angristan:
 
 #### Step 8: Transfer the Configuration File
 1. Once the installation completes, a configuration file will be created for your client. The file is typically saved as `Atlanta.ovpn` in the server.
-2. Copy the configuration file to your local machine. You can use `scp`:
+2. To view and copy the contents to a local file, use the `cat` command:
    ```bash
-   scp root@your_linode_ip:/root/Atlanta.ovpn ~/Atlanta.ovpn
+   cat /root/Atlanta.ovpn
    ```
+3. Copy the displayed contents and paste them into a new file named `Atlanta.ovpn` on your local machine.
 
 #### Step 9: Install an OpenVPN Client Locally
-1. On your local machine, download and install the OpenVPN client:
-   - For **Windows**: [Download OpenVPN](https://openvpn.net/community-downloads/)
-   - For **macOS**: Install through [Tunnelblick](https://tunnelblick.net/)
-   - For **Linux**: Install via package manager, e.g., `sudo apt install openvpn` for Debian/Ubuntu.
+1. On your local machine, download and install the OpenVPN client from the following link:
+   - [OpenVPN Client Connect for macOS](https://openvpn.net/client-connect-vpn-for-mac-os/)
 
 #### Step 10: Connect Using Your VPN
 1. Open your OpenVPN client and import the `Atlanta.ovpn` file.
